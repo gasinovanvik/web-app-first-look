@@ -1,0 +1,13 @@
+@{
+}
+
+System Type: @ViewBag.AirSys
+<br/>
+Reserve: @ViewBag.Reserve
+<br />
+Motor Power: @ViewBag.TextBoxtMotorPower
+<br />
+
+Calcs: @((((ViewBag.AirSys == "SupplySys" ? 1 : 1.5) 
+           + (ViewBag.Reserve == "WithoutReserve" ? 1 : 2)) 
+          * ViewBag.TextBoxtMotorPower).ToString("N2"))

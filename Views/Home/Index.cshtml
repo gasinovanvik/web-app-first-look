@@ -2,6 +2,8 @@
     ViewData["Title"] = "AHU Configurator";
 }
 
+<form method="post" action="/home/Specs">
+
 <div class="text-center">
     <h1 class="display-4">ALTAIR</h1>
     <p>Производство климатического оборудования — установок по обработке воздуха</p>
@@ -31,12 +33,12 @@
     <legend>Резервирование:</legend>
 
     <div>
-        <input type="radio" id="Reserve" name="Reserve">
+            <input type="radio" id="Reserve" name="Reserve" value="Reserve">
         <label for="Reserve">Есть резерв</label>
     </div>
 
     <div>
-        <input type="radio" id="WithoutReserve" name="Reserve" checked>
+            <input type="radio" id="WithoutReserve" name="Reserve" value="WithoutReserve" checked>
         <label for="WithoutReserve">Без резерва</label>
     </div>
 
@@ -44,7 +46,7 @@
 
 <label for="TextBoxtMotorPower">Мощность электродвигатель, Вт:</label>
 
-<input type="text" id="TextBoxtMotorPower" name="TextBoxtMotorPower" required
+<input type="number" id="TextBoxtMotorPower" name="TextBoxtMotorPower" required
        minlength="4" maxlength="8" size="10">
 
 
@@ -52,6 +54,8 @@
 
 <fieldset>
     <div>
-        <button name="button">Спецификация</button>
+        <button name="submit">Спецификация</button>
     </div>
 </fieldset>
+    
+</form>
