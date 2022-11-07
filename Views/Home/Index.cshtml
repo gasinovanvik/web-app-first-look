@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "AHU Configurator";
+}
+
+<div class="text-center">
+    <h1 class="display-4">ALTAIR</h1>
+    <p>Производство климатического оборудования — установок по обработке воздуха</p>
+</div>
+
+
+<fieldset>
+    <legend>Тип системы:</legend>
+
+    <div>
+        <input type="radio" id="SupplySys" name="AirSys" value="SupplySys" checked>
+        <label for="SupplySys">Приточная система</label>
+    </div>
+
+    <div>
+        <input type="radio" id="ExhSys" name="AirSys" value="ExhSys">
+        <label for="ExhSys">Вытяжная система</label>
+    </div>
+
+    <div>
+        <input type="radio" id="SupExhSys" name="AirSys" value="SupExhSys">
+        <label for="SupExhSys">Приточно-Вытяжная система</label>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend>Резервирование:</legend>
+
+    <div>
+        <input type="radio" id="Reserve" name="Reserve">
+        <label for="Reserve">Есть резерв</label>
+    </div>
+
+    <div>
+        <input type="radio" id="WithoutReserve" name="Reserve" checked>
+        <label for="WithoutReserve">Без резерва</label>
+    </div>
+
+</fieldset>
+
+<label for="TextBoxtMotorPower">Мощность электродвигатель, Вт:</label>
+
+<input type="text" id="TextBoxtMotorPower" name="TextBoxtMotorPower" required
+       minlength="4" maxlength="8" size="10">
+
+
+<p></p>
+
+<fieldset>
+    <div>
+        <button name="button">Спецификация</button>
+    </div>
+</fieldset>
